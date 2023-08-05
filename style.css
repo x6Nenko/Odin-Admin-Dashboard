@@ -184,8 +184,7 @@ main div {
 }
 
 .total {
-    border-radius: 20px;
-background: linear-gradient(225deg, #98F5E1 0%, #9371C7 100%);
+    background: linear-gradient(225deg, #98F5E1 0%, #9371C7 100%);
 
 }
 
@@ -194,17 +193,44 @@ background: linear-gradient(225deg, #98F5E1 0%, #9371C7 100%);
 }
 
 .completed {
-    border-radius: 20px;
-background: linear-gradient(180deg, #B9FBC0 0%, #9371C7 100%);
+    background: linear-gradient(180deg, #B9FBC0 0%, #9371C7 100%);
 }
 
 .in-progress {
-    border-radius: 20px;
-background: linear-gradient(135deg, #FFCFD2 0%, #9371C7 100%);
+    background: linear-gradient(135deg, #FFCFD2 0%, #9371C7 100%);
 }
 
 .small-slide {
+    display: grid;
+    position: relative;
+    padding: 20px;
+}
 
+.small-slide a {
+    justify-self: center;
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+}
+
+.small-slide:hover a  {
+    opacity: 1;
+}
+
+.calculator {
+    background-image: linear-gradient(180deg, #242529 0%, rgba(217, 217, 217, 0.00) 100%), url(./assets/previewCalculator.png);
+    background-position: top;
+    background-size: cover;
+}
+
+.sketch {
+    background-image: linear-gradient(180deg, #242529 0%, rgba(217, 217, 217, 0.00) 100%), url(./assets/previewSketch.png);
+    background-position: center left;
+    background-size: cover;
+}
+
+.open-project {
+    width: 200px;
+    height: 200px;
 }
 
 .side-info {
