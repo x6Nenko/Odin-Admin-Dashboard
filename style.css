@@ -12,7 +12,7 @@ body {
 
 .wrapper {
     display: grid;
-    grid-template-columns: 300px 3fr;
+    grid-template-columns: minmax(auto, 300px) 3fr;
     grid-template-rows: auto 4fr;
     grid-template-areas: 
         "sidebar header"
@@ -25,7 +25,6 @@ body {
 header {
     grid-area: header;
     display: grid;
-
     grid-template-columns: 1fr auto;
     padding: 40px;
 }
@@ -97,7 +96,8 @@ input[type="search"]::-webkit-search-cancel-button {
 
 aside {
     grid-area: sidebar;
-    height: 100vh;
+    height: 100%;
+    min-height: 100vh;
     background-color: #242529;
     color: #fff;
     padding: 40px;
@@ -143,18 +143,80 @@ a img {
     margin-bottom: 60px;
 }
 
-/* ================ Sidebar ================ */
+/* ================ Main ================ */
 
 main {
     grid-area: main;
     display: grid;
-    gap: 15px;
+    gap: 40px;
     padding: 40px;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(250px, 1fr)) minmax(250px, 300px);
+
 }
 
 main div {
-    height: 300px;
-    border: 1px solid sandybrown;
+    min-height: 300px;
+    /* border: 1px solid sandybrown; */
+    border-radius: 20px;
 }
 
+.big-slide {
+    grid-column: 1 / 3;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.big-slide div {
+    display: grid;
+    place-content: center;
+    justify-items: center;
+    color: #000;
+    font-weight: 700;
+}
+
+.big-slide div h1 {
+    font-size: 3rem;
+}
+
+.big-slide div img {
+    margin-bottom: 20px;
+}
+
+.total {
+    border-radius: 20px;
+background: linear-gradient(225deg, #98F5E1 0%, #9371C7 100%);
+
+}
+
+.total img {
+    transform: rotate(35deg);
+}
+
+.completed {
+    border-radius: 20px;
+background: linear-gradient(180deg, #B9FBC0 0%, #9371C7 100%);
+}
+
+.in-progress {
+    border-radius: 20px;
+background: linear-gradient(135deg, #FFCFD2 0%, #9371C7 100%);
+}
+
+.small-slide {
+
+}
+
+.side-info {
+    grid-column: 3 / 4;
+    grid-row: 1 / span 2;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg); /* Start rotation from 0 degrees */
+    }
+    to {
+        transform: rotate(-360deg); /* End rotation at 360 degrees (full circle) */
+    }
+}
