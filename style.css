@@ -13,15 +13,84 @@ body {
 .wrapper {
     display: grid;
     grid-template-columns: 300px 3fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: auto 4fr;
     grid-template-areas: 
         "sidebar header"
         "sidebar main"
     ;
 }
 
+/* ================ Header ================ */
+
 header {
     grid-area: header;
+    display: grid;
+
+    grid-template-columns: 1fr auto;
+    padding: 40px;
+}
+
+.profile-shortcuts {
+    display: grid;
+    justify-items: end;
+    align-items: center;
+    grid-template-columns: 1fr auto;
+    gap: 30px;
+}
+
+.profile-name {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-icons {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    align-items: center;
+}
+
+.profile-icons img {
+    cursor: pointer;
+}
+
+.search-field {
+    position: relative;
+    width: fit-content;
+}
+
+.search-icon {
+    position: absolute;
+    content: url(./assets/search.svg);
+    top: 6px;
+    left: 9px;
+}
+
+input[type="search"] {
+    width: 10px;
+    padding: 10px 20px 9px;
+    color: #fff;
+    background-color: #242529;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    transition: all .4s ease-in;
+    pointer-events: none;
+}
+
+input[type="search"]:focus {
+    pointer-events: unset;
+    padding: 10px 10px 9px 40px;
+    width: 300px;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    height: 24px;
+    width: 24px;
+    background-image: url(./assets/close.svg);
 }
 
 /* ================ Sidebar ================ */
@@ -41,7 +110,7 @@ nav {
 }
 
 nav:nth-of-type(1) {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 nav a {
@@ -50,13 +119,13 @@ nav a {
     padding: 20px;
     text-decoration: none;
     color: #fff;
-    transition: all .2s ease-in;
+    
 }
 
 nav a:hover {
     background-color: #2d2e31; 
     border-radius: 20px;
-    
+    transition: background-color .2s ease-in;
 }
 
 .active {
@@ -71,7 +140,7 @@ a img {
 .logo-container {
     display: grid;
     place-content: center;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 /* ================ Sidebar ================ */
@@ -80,7 +149,7 @@ main {
     grid-area: main;
     display: grid;
     gap: 15px;
-    padding: 15px;
+    padding: 40px;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
