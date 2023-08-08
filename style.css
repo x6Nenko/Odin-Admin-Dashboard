@@ -26,7 +26,11 @@ header {
     grid-area: header;
     display: grid;
     grid-template-columns: 1fr auto;
-    padding: 40px;
+    padding: 40px 50px 40px 40px;
+}
+
+header h1 {
+    color: #979797;
 }
 
 .profile-shortcuts {
@@ -139,7 +143,8 @@ a img {
 
 .logo-container {
     display: grid;
-    place-content: center;
+    /* place-content: center; */
+    padding-left: 10px;
     margin-bottom: 60px;
 }
 
@@ -159,6 +164,8 @@ main div {
     /* border: 1px solid sandybrown; */
     border-radius: 20px;
 }
+
+/* Big Slide */
 
 .big-slide {
     grid-column: 1 / 3;
@@ -185,11 +192,18 @@ main div {
 
 .total {
     background: linear-gradient(225deg, #98F5E1 0%, #9371C7 100%);
-
 }
 
 .total img {
     transform: rotate(35deg);
+}
+
+.big-slide h1 {
+    color: #121214;
+}
+
+.big-slide p {
+    color: #242529;
 }
 
 .completed {
@@ -200,16 +214,22 @@ main div {
     background: linear-gradient(135deg, #FFCFD2 0%, #9371C7 100%);
 }
 
+/* Small Slide */
+
 .small-slide {
     display: grid;
     position: relative;
-    padding: 20px;
+    padding: 20px 40px;
 }
 
 .small-slide a {
     justify-self: center;
     opacity: 0;
     transition: opacity 0.2s ease-in;
+}
+
+.small-slide h1 {
+    color: #D7D7D7;
 }
 
 .small-slide:hover a  {
@@ -233,9 +253,9 @@ main div {
     height: 200px;
 }
 
-.side-info {
-    
+/* Side Slide */
 
+.side-info {
     grid-column: 3 / 4;
     grid-row: 1 / span 2;
 
@@ -249,16 +269,19 @@ main div {
 
 .task-container {
     align-content: start;
-    height: 500px;
     height: min-content;
     background-color: #1b1b1e;
     border-radius: 20px;
-    padding: 20px 20px 40px;
+    padding: 40px;
     display: grid;
     grid-template-columns: auto;
     gap: 40px;
 }
 
+.task-container-header {
+    font-size: 12px;
+    color: #979797
+}
 
 .task {
     display: grid;
@@ -269,15 +292,17 @@ main div {
 
 .task-name h3 {
     margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.task p, .task-progress span {
+    font-size: 12px;
+    color: #D7D7D7;
 }
 
 .task-progress {
-    margin-top: 10px;
+    margin-top: 3px;
     text-align: center;
-}
-
-.task-progress span {
-    font-size: .8rem;
 }
 
 .task-info a img {
@@ -290,6 +315,6 @@ main div {
 
 hr {
     border: none;
-    border-bottom: 1px solid black;
-    height: 1px;
+    background: linear-gradient(90deg, rgba(151, 151, 151, 0.00) 0%, #979797 50%, rgba(151, 151, 151, 0.00) 100%);
+    height: 2px;
 }
