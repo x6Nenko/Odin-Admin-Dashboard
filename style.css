@@ -230,6 +230,7 @@ main div {
 
 .small-slide h1 {
     color: #D7D7D7;
+    font-size: 1.5rem;
 }
 
 .small-slide:hover a  {
@@ -237,13 +238,13 @@ main div {
 }
 
 .calculator {
-    background-image: linear-gradient(180deg, #242529 0%, rgba(217, 217, 217, 0.00) 100%), url(./assets/previewCalculator.png);
+    background-image: linear-gradient(180deg, #242529 5%, rgba(217, 217, 217, 0.00) 100%), url(./assets/previewCalculator.png);
     background-position: top;
     background-size: cover;
 }
 
 .sketch {
-    background-image: linear-gradient(180deg, #242529 0%, rgba(217, 217, 217, 0.00) 100%), url(./assets/previewSketch.png);
+    background-image: linear-gradient(180deg, #242529 5%, rgba(217, 217, 217, 0.00) 100%), url(./assets/previewSketch.png);
     background-position: center left;
     background-size: cover;
 }
